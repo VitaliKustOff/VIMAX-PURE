@@ -3,10 +3,6 @@
 
 namespace vimax {
 
-namespace limits {
-inline constexpr uint32_t CONTROL_PERIOD_MS = 250U;
-inline constexpr uint32_t SENSOR_STALE_MS = 5000U;
-}
 
 enum class Process : uint8_t {
   Monitoring=101, Thermostat=102, Power=103, Distillation=104,
