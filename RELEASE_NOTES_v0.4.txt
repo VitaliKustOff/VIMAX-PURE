@@ -1,0 +1,20 @@
+VIMAX.PURE v0.4 RECTIFICATION — ESP32-S3 N16R8
+
+This package consolidates the exact source fixes that produced a successful
+PlatformIO build in the user's environment:
+
+1. main.cpp uses limits::CONTROL_PERIOD_MS from Model.h.
+2. Hardware.cpp avoids mixed-type std::min() compilation failure.
+3. Only process 109 (rectification) has executable logic.
+4. Other process IDs are placeholders and cannot drive outputs.
+5. Power outputs boot DISARMED.
+
+Build:
+  PlatformIO -> esp32-s3-r16n8 -> General -> Build
+
+Then:
+  Upload
+  Platform -> Upload Filesystem Image
+
+Do not connect mains voltage or a heater until BoardConfig.h GPIO assignments,
+active levels, isolation, zero-cross interface, and actuator drivers are verified.

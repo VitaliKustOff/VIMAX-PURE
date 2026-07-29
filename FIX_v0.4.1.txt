@@ -1,0 +1,9 @@
+VIMAX.PURE v0.4.1
+
+Исправлено:
+- добавлен namespace vimax::limits в include/Model.h;
+- CONTROL_PERIOD_MS = 250 мс;
+- SENSOR_STALE_MS = 5000 мс;
+- устранена ошибка limits has not been declared в main.cpp и Controller.cpp.
+
+Предупреждения библиотеки OneWire о #undef не блокируют сборку.
